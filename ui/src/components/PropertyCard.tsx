@@ -23,7 +23,7 @@ function PropertyCard({ propertyId, data }: InternalPropertyState) {
           .then(res => {
             setProperty(res);
           })
-          .catch(err => setError(err.response.statusText || err.message || 'Error fetching property'))
+          .catch(err => setError(err.response?.statusText || err.message || 'Error fetching property'))
           .finally(() => setLoading(false));
       }
     
