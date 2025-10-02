@@ -63,7 +63,7 @@ export const mswHandlers = [
 ]
 
 export const inputMaskModeManager = () => {
-  let enabled = false;
+  let enabled = true;
  
   return {
     enable: () => { enabled = true; },
