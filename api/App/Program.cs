@@ -1,4 +1,5 @@
 using api.Data;
+using api.Endpoints;
 using Microsoft.EntityFrameworkCore;
 
 namespace api;
@@ -38,6 +39,7 @@ public static class MainProgram
         }
 
         var apiGroup = app.MapGroup("/api");
+        apiGroup.MapPropertyEndpoints();
 
         app.Run();
     }
