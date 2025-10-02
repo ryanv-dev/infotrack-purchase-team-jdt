@@ -1,5 +1,5 @@
 # Junior Developer Technical Test – Purchase Team
-- Property Management System
+-- Property Management System
 
 ## How to Run
 
