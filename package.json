@@ -1,0 +1,25 @@
+{
+  "name": "infotrack-purchase-team-jdt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:ui": "pnpm --filter ui dev",
+    "storybook": "pnpm --filter ui storybook",
+    "test-storybook": "pnpm --filter ui test-storybook",
+    "build:ui": "pnpm --filter ui build",
+    "start:ui": "pnpm --filter ui start",
+    "dev:api": "dotnet watch --project ./api/App/api.csproj",
+    "test:api": "cd ./api/Tests && dotnet test",
+    "build:api": "dotnet build --project ./api/App/api.csproj",
+    "dev": "concurrently \"pnpm run dev:ui\" \"pnpm run dev:api\"",
+    "postinstall": "dotnet restore ./api/App/api.csproj"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "packageManager": "pnpm@10.17.1",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
